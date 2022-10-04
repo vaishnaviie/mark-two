@@ -5,7 +5,7 @@ var readlineSync=require('readline-sync');
 var score=0;
 var userName = readlineSync.question("What is your name? \n");
 console.log("Welcome "+userName+" do you like memes?")
-console.log("Let's see how good you are with a Bollywood memes!")
+console.log("Let's see how good you are with a Bollywood memes!\n")
 
 function bolly(question,answer){
   var userAns=readlineSync.question(question);
@@ -16,11 +16,11 @@ function bolly(question,answer){
   }
   else{
     console.log("oh oh wrong answer!");
-    score--;
+    // score--;
   }
 
   console.log("Your current score is "+score);
-  console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+  console.log("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
 }
 
 var questions=[
@@ -50,12 +50,12 @@ var questions=[
   },
 
   {
-    question:"Bhai sahab ye kis line m aa gaye aap \n a. Mujhase shaadi karogi\n b. Housefull 2 \n c. Welcome \n d. Jolly LLB         2 \n",
+    question:"Bhai sahab ye kis line m aa gaye aap \n a. Mujhase shaadi karogi\n b. Housefull 2 \n c. Welcome \n d. Jolly LLB 2 \n",
     answer:"c"
   },
 
   {
-    question:"Aurat banne ka shaikh hai ha? \n a. Bhool bhulaiyya\n b. Bhagam bhag 2 \n c. Welcome \n d. Housefull 2 \n",
+    question:"Aurat banne ka shaukh hai ha? \n a. Bhool bhulaiyya\n b. Bhagam bhag 2 \n c. Welcome \n d. Housefull 2 \n",
     answer:"a"
   },
 
@@ -86,7 +86,7 @@ if(score===10){
   console.log("Hurrey your score is "+score+"/10");
   console.log("WOW..You are Genius!");
 }
-if(score>5){
+if(score>=5){
   console.log("Yayy! your score is "+score+"/10");
   console.log("You are doing well!");
 }
